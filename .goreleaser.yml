@@ -1,0 +1,147 @@
+version: 2
+project_name: sensu-plugins-process-checks-go
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - main: ./cmd/check-process/main.go
+    id: check-process
+    binary: bin/check-process
+    env:
+      - CGO_ENABLED=0
+    targets:
+      - linux_386
+      - linux_amd64
+      - linux_arm_7
+      - linux_arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+
+  - main: ./cmd/check-cmd/main.go
+    id: check-cmd
+    binary: bin/check-cmd
+    env:
+      - CGO_ENABLED=0
+    targets:
+      - linux_386
+      - linux_amd64
+      - linux_arm_7
+      - linux_arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+
+  - main: ./cmd/check-process-restart/main.go
+    id: check-process-restart
+    binary: bin/check-process-restart
+    env:
+      - CGO_ENABLED=0
+    targets:
+      - linux_386
+      - linux_amd64
+      - linux_arm_7
+      - linux_arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+
+  - main: ./cmd/check-threads-count/main.go
+    id: check-threads-count
+    binary: bin/check-threads-count
+    env:
+      - CGO_ENABLED=0
+    targets:
+      - linux_386
+      - linux_amd64
+      - linux_arm_7
+      - linux_arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+
+  - main: ./cmd/metrics-per-process/main.go
+    id: metrics-per-process
+    binary: bin/metrics-per-process
+    env:
+      - CGO_ENABLED=0
+    targets:
+      - linux_386
+      - linux_amd64
+      - linux_arm_7
+      - linux_arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+
+  - main: ./cmd/metrics-process-status/main.go
+    id: metrics-process-status
+    binary: bin/metrics-process-status
+    env:
+      - CGO_ENABLED=0
+    targets:
+      - linux_386
+      - linux_amd64
+      - linux_arm_7
+      - linux_arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+
+  - main: ./cmd/metrics-process-uptime/main.go
+    id: metrics-process-uptime
+    binary: bin/metrics-process-uptime
+    env:
+      - CGO_ENABLED=0
+    targets:
+      - linux_386
+      - linux_amd64
+      - linux_arm_7
+      - linux_arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+
+  - main: ./cmd/metrics-processes-threads-count/main.go
+    id: metrics-processes-threads-count
+    binary: bin/metrics-processes-threads-count
+    env:
+      - CGO_ENABLED=0
+    targets:
+      - linux_386
+      - linux_amd64
+      - linux_arm_7
+      - linux_arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+
+archives:
+  - id: tar
+    format: tar.gz
+    files:
+      - LICENSE
+      - README.md
+      - CHANGELOG.md
+
+checksum:
+  name_template: "{{ .ProjectName }}_{{ .Version }}_sha512-checksums.txt"
+  algorithm: sha512
