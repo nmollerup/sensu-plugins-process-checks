@@ -1,5 +1,5 @@
 version: 2
-project_name: sensu-plugins-process-checks-go
+project_name: sensu-plugins-process-checks
 
 before:
   hooks:

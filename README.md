@@ -1,4 +1,4 @@
-# sensu-plugins-process-checks-go
+# sensu-plugins-process-checks
 
 Go implementation of process monitoring checks and metrics for Sensu, replacing the Ruby-based [sensu-plugins-process-checks](https://github.com/sensu-plugins/sensu-plugins-process-checks).
 
@@ -25,8 +25,8 @@ This project provides the following commands:
 ### From Source
 
 ```bash
-go install github.com/nmollerup/sensu-plugins-process-checks-go/cmd/check-process@latest
-go install github.com/nmollerup/sensu-plugins-process-checks-go/cmd/check-cmd@latest
+go install github.com/nmollerup/sensu-plugins-process-checks/cmd/check-process@latest
+go install github.com/nmollerup/sensu-plugins-process-checks/cmd/check-cmd@latest
 # ... etc
 ```
 

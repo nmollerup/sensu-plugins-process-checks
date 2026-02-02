@@ -1,4 +1,4 @@
-module github.com/nmollerup/sensu-plugins-process-checks-go
+module github.com/nmollerup/sensu-plugins-process-checks
 
 go 1.22.2
 
