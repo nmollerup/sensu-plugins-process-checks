@@ -2,7 +2,10 @@ module github.com/nmollerup/sensu-plugins-process-checks
 
 go 1.22.2
 
-require github.com/sensu/sensu-plugin-sdk v0.19.0
+require (
+	github.com/sensu/sensu-go/types v0.13.0
+	github.com/sensu/sensu-plugin-sdk v0.19.0
+)
 
 require (
 	github.com/blang/semver/v4 v4.0.0 // indirect
@@ -23,7 +26,6 @@ require (
 	github.com/robfig/cron/v3 v3.0.1 // indirect
 	github.com/sensu/core/v2 v2.20.0 // indirect
 	github.com/sensu/sensu-api-tools v0.1.0 // indirect
-	github.com/sensu/sensu-go/types v0.13.0 // indirect
 	github.com/sensu/sensu-licensing/v2 v2.2.1 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/spf13/afero v1.9.2 // indirect
@@ -32,7 +34,6 @@ require (
 	github.com/spf13/jwalterweatherman v1.0.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.7.0 // indirect
-	github.com/stretchr/testify v1.8.3 // indirect
 	github.com/subosito/gotenv v1.2.0 // indirect
 	go.etcd.io/etcd/api/v3 v3.5.10 // indirect
 	golang.org/x/net v0.17.0 // indirect
@@ -42,8 +43,7 @@ require (
 	google.golang.org/genproto/googleapis/api v0.0.0-20231030173426-d783a09b4405 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20231030173426-d783a09b4405 // indirect
 	google.golang.org/grpc v1.59.0 // indirect
-	google.golang.org/protobuf v1.31.0 // indirect
-	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
+	google.golang.org/protobuf v1.33.0 // indirect
 	gopkg.in/ini.v1 v1.51.0 // indirect
 	gopkg.in/sourcemap.v1 v1.0.5 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
