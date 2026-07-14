@@ -1,6 +1,6 @@
 module github.com/nmollerup/sensu-plugins-process-checks
 
-go 1.24.0
+go 1.25.0
 
 require (
 	github.com/sensu/sensu-go/types v0.13.0

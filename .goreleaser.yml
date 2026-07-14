@@ -18,9 +18,9 @@ builds:
       - linux_arm64
     ldflags:
       - -s -w
-      - -X main.version={{.Version}}
-      - -X main.commit={{.Commit}}
-      - -X main.date={{.Date}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.version={{.Version}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.commit={{.Commit}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.date={{.Date}}
 
   - main: ./cmd/check-cmd/main.go
     id: check-cmd
@@ -34,9 +34,9 @@ builds:
       - linux_arm64
     ldflags:
       - -s -w
-      - -X main.version={{.Version}}
-      - -X main.commit={{.Commit}}
-      - -X main.date={{.Date}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.version={{.Version}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.commit={{.Commit}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.date={{.Date}}
 
   - main: ./cmd/check-process-restart/main.go
     id: check-process-restart
@@ -50,9 +50,9 @@ builds:
       - linux_arm64
     ldflags:
       - -s -w
-      - -X main.version={{.Version}}
-      - -X main.commit={{.Commit}}
-      - -X main.date={{.Date}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.version={{.Version}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.commit={{.Commit}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.date={{.Date}}
 
   - main: ./cmd/check-threads-count/main.go
     id: check-threads-count
@@ -66,9 +66,9 @@ builds:
       - linux_arm64
     ldflags:
       - -s -w
-      - -X main.version={{.Version}}
-      - -X main.commit={{.Commit}}
-      - -X main.date={{.Date}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.version={{.Version}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.commit={{.Commit}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.date={{.Date}}
 
   - main: ./cmd/metrics-per-process/main.go
     id: metrics-per-process
@@ -82,9 +82,9 @@ builds:
       - linux_arm64
     ldflags:
       - -s -w
-      - -X main.version={{.Version}}
-      - -X main.commit={{.Commit}}
-      - -X main.date={{.Date}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.version={{.Version}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.commit={{.Commit}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.date={{.Date}}
 
   - main: ./cmd/metrics-process-status/main.go
     id: metrics-process-status
@@ -98,9 +98,9 @@ builds:
       - linux_arm64
     ldflags:
       - -s -w
-      - -X main.version={{.Version}}
-      - -X main.commit={{.Commit}}
-      - -X main.date={{.Date}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.version={{.Version}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.commit={{.Commit}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.date={{.Date}}
 
   - main: ./cmd/metrics-process-uptime/main.go
     id: metrics-process-uptime
@@ -114,9 +114,9 @@ builds:
       - linux_arm64
     ldflags:
       - -s -w
-      - -X main.version={{.Version}}
-      - -X main.commit={{.Commit}}
-      - -X main.date={{.Date}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.version={{.Version}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.commit={{.Commit}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.date={{.Date}}
 
   - main: ./cmd/metrics-processes-threads-count/main.go
     id: metrics-processes-threads-count
@@ -130,9 +130,9 @@ builds:
       - linux_arm64
     ldflags:
       - -s -w
-      - -X main.version={{.Version}}
-      - -X main.commit={{.Commit}}
-      - -X main.date={{.Date}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.version={{.Version}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.commit={{.Commit}}
+      - -X github.com/sensu/sensu-plugin-sdk/version.date={{.Date}}
 
 archives:
   - id: tar
